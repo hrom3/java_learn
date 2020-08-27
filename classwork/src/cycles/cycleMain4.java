@@ -1,11 +1,9 @@
 package cycles;
 
-public class cycleMain2 {
-    public static void main(String[] args){
-        int n=5;
-        do{
+public class cycleMain4 {
+    public static void main(String[] args) {
+        for (int n = 5; n > 0; n--) {
             System.out.println("Sample:" + n);
-            n--;
-        } while (n > 0);
+        }
     }
 }

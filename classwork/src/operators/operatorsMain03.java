@@ -1,6 +1,6 @@
 package operators;
 
-public class operatorsMain3 {
+public class operatorsMain03 {
     public static void main(String[] args) {
         int dayNumber = 3;
         switch (dayNumber){
