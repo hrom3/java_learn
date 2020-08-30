@@ -1,6 +1,6 @@
 package cycles;
 
-class returnMetod {
+class ReturnMetod {
     void printFirstSevenElements(int c){
         for (int i = 1; i <=c; i++){
             System.out.println((i));

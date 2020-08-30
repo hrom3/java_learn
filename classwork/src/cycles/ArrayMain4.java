@@ -1,7 +1,7 @@
 package cycles;
 
 
-public class arrayMain4 {
+public class ArrayMain4 {
     public static void main(String[] adf){
         for (int i = 1; i < 6; i++){
             if (i == 4){
@@ -10,7 +10,7 @@ public class arrayMain4 {
             }
             System.out.println("i= " + i);
         }
-     returnMetod asd = new returnMetod();
+     ReturnMetod asd = new ReturnMetod();
         asd.printFirstSevenElements(23);
     }
 }

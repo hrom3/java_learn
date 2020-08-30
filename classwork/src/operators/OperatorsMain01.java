@@ -1,6 +1,6 @@
 package operators;
 
-public class operatorsMain01 {
+public class OperatorsMain01 {
 
     public static void main(String[]     args){
         int a = 10;

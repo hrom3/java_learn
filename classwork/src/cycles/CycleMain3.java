@@ -1,6 +1,6 @@
 package cycles;
 
-public class cycleMain3 {
+public class CycleMain3 {
     public static void main(String[] arg){
         int sum = 0;
         int i= 0;

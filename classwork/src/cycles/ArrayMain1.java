@@ -1,6 +1,6 @@
 package cycles;
 
-public class arrayMain1 {
+public class ArrayMain1 {
     public static void main(String[] adff){
         int[] value = new int [10];
         for (int elem:value) {

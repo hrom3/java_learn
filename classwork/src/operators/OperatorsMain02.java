@@ -1,6 +1,6 @@
 package operators;
 
-public class operatorsMain02 {
+public class OperatorsMain02 {
 
     public static void main(String[] args){
     boolean isBoolTrue = false;
