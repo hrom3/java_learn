@@ -1,0 +1,4 @@
+[submodule "homework"]
+	path = homework
+	url = https://github.com/hrom3/java_learn_homework.git
+	branch = main
