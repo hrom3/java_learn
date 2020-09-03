@@ -1,6 +1,6 @@
-package cycles;
+package strings;
 
-public class StringMain4 {
+public class StringsMain4 {
     public static void main(String[] args) {
         System.out.println(String.format("ПРЕМВЕТ %s Я ТЕБЯ ТАК ДЛОГО ЖДАЛ", "САНЯ"));
         System.out.println(String.format("ПРЕМВЕТ %s Я ТЕБЯ ТАК ДЛОГО ЖДАЛ. МНЕ %d ЛЕТ", "САНЯ", 33));

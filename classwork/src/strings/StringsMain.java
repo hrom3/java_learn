@@ -1,4 +1,4 @@
-package cycles;
+package strings;
 
 import java.util.Objects;
 
