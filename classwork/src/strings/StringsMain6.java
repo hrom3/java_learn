@@ -24,7 +24,7 @@ public class StringsMain6 {
 
         StringBuilder result = new StringBuilder((array[0] != null) ? array[0] : "");
         /*
-        Занимает меньше времени, чем конкатекнация (+) но нао чень больших массивах
+        Занимает меньше времени, чем конкатекнация (+) но на очень больших массивах
         данных. StringBuffer работает как и StringBuilder, но потокобезопасен
         */
 
