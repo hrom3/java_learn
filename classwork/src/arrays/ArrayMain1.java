@@ -1,4 +1,4 @@
-package cycles;
+package arrays;
 
 public class ArrayMain1 {
     public static void main(String[] adff){

@@ -1,5 +1,7 @@
-package cycles;
+package arrays;
 
+
+import cycles.ReturnMetod;
 
 public class ArrayMain4 {
     public static void main(String[] adf){
