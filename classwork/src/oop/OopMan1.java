@@ -11,10 +11,10 @@ public class OopMan1 {
 
         System.out.println(man1);
         System.out.println(man2.toString());
-        System.out.println(man1.varible1);
-        System.out.println(man1.varible2);
-        System.out.println(man1.varible3);
-        System.out.println(man1.varible4);
+//        System.out.println(man1.varible1);
+//        System.out.println(man1.varible2);
+//        System.out.println(man1.varible3);
+//        System.out.println(man1.varible4);
 
 
 
