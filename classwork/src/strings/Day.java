@@ -1,39 +1,39 @@
 package strings;
 
 public enum Day {
-    MONDAY(  "Понедельник", true),
+    MONDAY("Понедельник", true),
     TUESDAY("Вторник", true),
     WEDNESDAY("Среда", true),
     THURSDAY("Четверг", true),
-    FRIDAY( "Пятница", true),
+    FRIDAY("Пятница", true),
     SATURDAY("Суббота", false),
-    unknown("Суббота", false),
+    unknow("неизвестно", false),
     SUNDAY("Воскресенье", false);
 
-    private boolean workDay;
     private String rusName;
+    private boolean isWorkDay;
 
-    Day(String rus, boolean isWorkDay) {
+    Day(String rus, boolean isWorkDay){
         this.rusName = rus;
-        this.workDay = isWorkDay;
+        this.isWorkDay = isWorkDay;
     }
 
-    public String getRusName() {
+    public String getRusName(){
         return this.rusName;
     }
 
-    public boolean getIsWorkDay() {
-        return this.workDay;
+    public boolean isWorkDay(){
+        return this.isWorkDay;
     }
 
-    public static Day valueOfIgnoreCase(String dayName) {
+    public static Day valueOfIgnoreCase(String dayName){
         String dayNameUpper = dayName.toUpperCase();
-        for (Day value: values()) {
-            if (value.name().toUpperCase().equals(dayNameUpper)) {
+        for (Day value : values()) {
+            if(value.name().toUpperCase().equals(dayNameUpper)){
                 return value;
             }
         }
-        return unknown;
-    }
 
+        return unknow;
+    }
 }

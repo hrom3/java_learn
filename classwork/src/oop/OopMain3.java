@@ -1,48 +1,38 @@
 package oop;
 
-import pensia_calc.HumanPensiaCala;
-import pensia_calc.IPensiaCalc;
-import pensia_calc.MilataryPensiaCala;
-import pensia_calc.PresidentPensiaCala;
+import oop.pensia_calcalators.*;
 
 import java.util.Scanner;
 
 public class OopMain3 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введи число");
-        int variant = scan.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите вариант калькулятора");
+        int variant = scanner.nextInt();
 
+        Man man1 = new Man();
+        man1.setType(ETypeMan.PRESIDENT);
+        man1.setYearOld(68);
 
-        Man man1 =  new Man();
-        Man president = new Man();
-        Man mil = new Man();
-
-        man1.setName("Vania");
-        president.setName("Sania");
-        mil.setName("Vika");
-        man1.setType(ETypeMan.HUMAN);
-        president.setType(ETypeMan.PPRESIDENT);
-        mil.setType(ETypeMan.MILLITARY);
-        mil.setYearOld(20);
-        man1.setYearOld(20);
-        man1.setHairLength(25);
+        Man man2 = new Man("Иван", 15);
+        man2.setType(ETypeMan.HUMAN);
+        man2.setYearOld(25);
 
         BuhMan buh = new BuhMan();
         System.out.println(buh.calc(getCalculator(variant), man1));
-        System.out.println(buh.calc(getCalculator(variant), mil));
-        System.out.println(buh.calc(getCalculator(variant), president));
-
+        System.out.println(buh.calc(getCalculator(variant), man2));
+//        System.out.println(buh.calc(getCalculator(variant), buhMan));
     }
-    public static IPensiaCalc getCalculator(int variant) {
-        switch (variant) {
+
+    public static IPensiaCalculator getCalculator(int variant){
+        switch (variant){
             case 1:
-                return  new PresidentPensiaCala();
+                return new PresidentPensiaCalculator();
             case 2:
-                return new MilataryPensiaCala();
+                return new MilitaryPensiaCalculator();
             case 3:
             default:
-                return new HumanPensiaCala();
+                return new HumanPensiaCalculator();
         }
     }
 }

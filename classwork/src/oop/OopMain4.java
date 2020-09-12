@@ -1,29 +1,27 @@
 package oop;
 
-import pensia_calc.*;
-
-import java.util.Scanner;
+import oop.pensia_calcalators.*;
 
 public class OopMain4 {
     public static void main(String[] args) {
         Man man1 = new Man();
-        Man president = new Man();
-        Man mil = new Man();
+        man1.setType(ETypeMan.PRESIDENT);
+        man1.setYearOld(68);
 
-        man1.setName("Vania");
-        president.setName("Sania");
-        mil.setName("Vika");
-        man1.setType(ETypeMan.HUMAN);
-        president.setType(ETypeMan.PPRESIDENT);
-        mil.setType(ETypeMan.MILLITARY);
-        mil.setYearOld(20);
-        man1.setYearOld(20);
-        man1.setHairLength(25);
+        Man man2 = new Man("Иван", 5);
+        man2.setType(ETypeMan.HUMAN);
+        man2.setYearOld(25);
 
-        IPensiaCalc calc = new MultiPenciaCalc();
-        System.out.println(calc.calc(man1));
-        System.out.println(calc.calc(mil));
-        System.out.println(calc.calc(president));
+        Man man3 = new Man("Vika", 25);
+        man2.setType(ETypeMan.HUMAN);
+        man2.setYearOld(35);
 
+
+        BuhMan buh = new BuhMan();
+        IPensiaCalculator calculator = new MultiPensiaCalculator();
+        System.out.println(buh.calc(calculator, man1));
+        System.out.println(buh.calc(calculator, man2));
+        System.out.println(buh.calc(calculator, man3));
     }
+
 }

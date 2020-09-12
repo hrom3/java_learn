@@ -1,56 +1,57 @@
 package strings;
 
+import java.util.Arrays;
+
 public class StringsMain5 {
     public static void main(String[] args) {
-        String name = "Саша";
-        String result = name.concat(" , учится Java");
-        String result1 = name + " , учится Java";
-        int[] arr = {132, 54845, 5254, 5454, 4486, 5484, 1};
+        String name = "Илья";
+        String result = name.concat(", научи меня писать код");
 
         System.out.println(name);
         System.out.println(result);
-        System.out.println(result1);
-        System.out.println("Саша".concat(" , учится Java"));
+        System.out.println("Илья".concat(", научи меня писать код"));
 
-        String number = String.valueOf(arr[5]);
+//        String number = 1;
+        String number = String.valueOf(1);
+
+        System.out.println(1);
         System.out.println(number);
-
-        for (int i : arr) {
-            System.out.println(i);
-        }
-
         System.out.println(String.valueOf(true));
 
-        String text = String.join(", ", new String[] {"Имя 1", "Имя 6", "Имя 5"});
-        System.out.println(text);
-        System.out.println (joinArrayToString("!!!!!!!! ", new String[] {"Илья", "Сергей", "Коля"}));
+        String joinStr = String.join(" Привет:", new String[] {"Илья", "Сергей", "Коля"} );
 
-
+        System.out.println(joinStr);
+        System.out.println(joinArrayToString(", ", new String[] {"Илья", "Сергей", "Коля"}));
+        System.out.println(joinArrayToString(", ", new String[] {"Илья",null}));
+        System.out.println(joinArrayToString(", ", new String[] {null, "Илья"}));
+        String joinResult = joinArrayToString(", ", null);
+        System.out.println(joinResult);
+        System.out.println(joinArrayToString(", ", null));
     }
 
     /**
-     * Матод создает новую строку в которую помещает элементы массива разделяя
-     * их между собой с помощью разделителя
+     * Метод создаёт новую строку в которую помещает элементы массива разделяя
+     * их между собой при помощи разделителя
      * @param delimiter разделитель. Пример: ", "
-     * @param array массив строк. Пример: {"Илья", "Сергей", "Коля"}
-     * @return итоговая строка с элементами. Пример "Илья, Сергей, Коля"
+     * @param arr массив элементов. Пример: {"Илья", "Сергей", "Коля"}
+     * @return итоговая строка с элементами "Илья, Сергей, Коля"
      */
-    public static String joinArrayToString(String delimiter, String[] array){
-        if (array == null || array.length == 0) {
+    public static String joinArrayToString(String delimiter, String[] arr){
+        if(arr == null || arr.length == 0){
             return "";
         }
-        if (delimiter == null){
+        if(delimiter == null){
             throw new IllegalArgumentException("Делиметр не может быть null");
         }
 
-        String result = (array[0] != null) ? array[0] : "";
+        String result = arr[0] == null ? "" : arr[0];
 
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] != null) {
-                if (result.length() > 0) {
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] != null){
+                if(result.length() > 0){
                     result += delimiter;
                 }
-                result += array[i];
+                result += arr[i];
             }
         }
 

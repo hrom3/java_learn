@@ -6,7 +6,7 @@ import oop.Man;
 public class PresidentPensiaCala implements IPensiaCalc {
     @Override
     public double calc(Man man) {
-        if (!man.getType().equals(ETypeMan.PPRESIDENT)) {
+        if (!man.getType().equals(ETypeMan.PRESIDENT)) {
             return Integer.MIN_VALUE;
         }
         return 0;

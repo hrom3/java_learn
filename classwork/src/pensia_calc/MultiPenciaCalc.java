@@ -11,9 +11,9 @@ public class MultiPenciaCalc implements IPensiaCalc {
 
     public static IPensiaCalc getCalculator(Man man) {
         switch (man.getType()) {
-            case PPRESIDENT:
+            case PRESIDENT:
                 return new PresidentPensiaCala();
-            case MILLITARY:
+            case MILITARY:
                 return new MilataryPensiaCala();
             case HUMAN:
             default:

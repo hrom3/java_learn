@@ -11,10 +11,9 @@ public abstract class APhone {
         this.ownerName = ownerName;
     }
 
-    public abstract String getModel();
-
-
-    public void call(String phoneNumber) {
-        System.out.println("Модный талефон " + getModel() + " владельца " + ownerName +" звонит " + phoneNumber);
+    public void call(String number){
+        System.out.println("Модный телефон " + getModel() + " владельца " + ownerName + " звонит " + number);
     }
+
+    public abstract String getModel();
 }

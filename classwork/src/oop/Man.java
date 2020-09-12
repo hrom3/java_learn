@@ -1,9 +1,33 @@
 package oop;
 
+import oop.ETypeMan;
+
 public class Man {
     private String name;
     private int hairLength;
     private int yearOld;
+    private ETypeMan type;
+
+    protected int variable2;
+    int variable3;
+
+    public Man(){
+        this.name = "Иван";
+        this.hairLength = 5;
+    }
+
+    public Man(String name, int hairLength){
+        this.name = name;
+        this.hairLength = hairLength;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHairLength(int hairLength) {
+        this.hairLength = hairLength;
+    }
 
     public ETypeMan getType() {
         return type;
@@ -13,10 +37,6 @@ public class Man {
         this.type = type;
     }
 
-    ETypeMan type;
-
-
-
     public int getYearOld() {
         return yearOld;
     }
@@ -25,42 +45,27 @@ public class Man {
         this.yearOld = yearOld;
     }
 
-    public Man() {
-        name = "Иван";
-        hairLength = 5;
+    public String getName(){
+        return this.name;
     }
 
-    private Man(String name, int hairLength) {
-        this.name = name;
-        this.hairLength = hairLength;
+    private String random(){
+        return "adjsamnjbsldkjbhnadks";
     }
 
-    @Override
-    public String toString() {
-        return '\"' + name + '\"' +
-                ", \"" + hairLength +
-                '\"';
+    public int getHairLength(){
+        return this.hairLength;
+    }
+
+    public String sayHello() {
+        return "Привет!";
     }
 
     public void grow() {
         hairLength++;
     }
-    public String sayHello() {
-        return "Привет!";
-    }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public int getHairLength() {
-        return this.hairLength;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setHairLength(int hairLength) {
-        this.hairLength = hairLength;
+    public String toString() {
+        return "Имя : " + this.name + ", Длинна волос : " + this.hairLength;
     }
 }

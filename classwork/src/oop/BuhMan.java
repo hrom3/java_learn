@@ -1,9 +1,10 @@
 package oop;
 
-import pensia_calc.IPensiaCalc;
+import oop.pensia_calcalators.IPensiaCalculator;
 
 public class BuhMan {
-    public double calc(IPensiaCalc calc, Man man) {
-        return calc.calc(man);
+
+    public double calc(IPensiaCalculator calculator, Man man){
+        return calculator.calc(man);
     }
 }
