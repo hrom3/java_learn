@@ -21,14 +21,6 @@ public class Man {
         this.hairLength = hairLength;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHairLength(int hairLength) {
-        this.hairLength = hairLength;
-    }
-
     public ETypeMan getType() {
         return type;
     }

@@ -8,20 +8,15 @@ public class OopMain4 {
         man1.setType(ETypeMan.PRESIDENT);
         man1.setYearOld(68);
 
-        Man man2 = new Man("Иван", 5);
+        Man man2 = new Man("Иван", 15);
         man2.setType(ETypeMan.HUMAN);
         man2.setYearOld(25);
-
-        Man man3 = new Man("Vika", 25);
-        man2.setType(ETypeMan.HUMAN);
-        man2.setYearOld(35);
-
 
         BuhMan buh = new BuhMan();
         IPensiaCalculator calculator = new MultiPensiaCalculator();
         System.out.println(buh.calc(calculator, man1));
         System.out.println(buh.calc(calculator, man2));
-        System.out.println(buh.calc(calculator, man3));
+//        System.out.println(buh.calc(getCalculator(variant), buhMan));
     }
 
 }
