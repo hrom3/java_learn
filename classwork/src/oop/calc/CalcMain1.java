@@ -33,7 +33,7 @@ public class CalcMain1 {
         System.out.println(calcResult3);
         System.out.println(savedCalc.getCounter());
 
-        Fizik fizik4 = new Fizik(new CalcWithCounter3(calc1));
+        Fizik<ICalcWithCounter> fizik4 = new Fizik<>(new CalcWithCounter3(calc1));
         double calcResult4 = fizik4.calc(123, 77);
 //        ICalcWithCounter savedCalc4 = (ICalcWithCounter) fizik4.getCalc(); //ClassCastException
 
@@ -41,10 +41,7 @@ public class CalcMain1 {
 //        System.out.println(savedCalc4.getCounter());
         fizik4.getCalc().add(55, 99);
 //        System.out.println(((ICalcWithCounter) fizik4.getCalc()).getCounter()); //ClassCastException
-        ICalc savedCalc4 = fizik4.getCalc();
-
-        if(savedCalc4 instanceof ICalcWithCounter){
-            System.out.println(((ICalcWithCounter) fizik4.getCalc()).getCounter());
-        }
+        ICalcWithCounter savedCalc4 = fizik4.getCalc();
+        System.out.println(savedCalc4.getCounter());
     }
 }
