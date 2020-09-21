@@ -1,9 +1,9 @@
 package oop.calc.dto;
 
-public class Fizik<T extends ICalc> {
-    private final T calc;
+public class FizikOld {
+    private final ICalc calc;
 
-    public Fizik(T calc) {
+    public FizikOld(ICalc calc) {
         this.calc = calc;
     }
 
@@ -11,7 +11,7 @@ public class Fizik<T extends ICalc> {
         return this.calc.minus(a, b);
     }
 
-    public T getCalc(){
+    public ICalc getCalc(){
         return this.calc;
     }
 }
