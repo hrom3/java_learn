@@ -1,8 +1,8 @@
 package oop.calculator.dto;
 
-public class Fizik {
-    private ICalc calc;
-    public Fizik(ICalc calc) {
+public class Fizik<T extends ICalc> {
+    private T calc;
+    public Fizik(T calc) {
         this.calc = calc;
     }
 
@@ -10,7 +10,11 @@ public class Fizik {
         return this.calc.add(a, b);
     }
 
-    public ICalc getCalc() {
-        return this.calc;
+    public T getCalc() {
+        return calc;
+    }
+
+    public void setCalc(T calc) {
+        this.calc = calc;
     }
 }

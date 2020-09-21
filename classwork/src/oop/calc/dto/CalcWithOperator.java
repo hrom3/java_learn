@@ -6,6 +6,10 @@ public class CalcWithOperator implements ICalc{
 
     }
 
+    public CalcWithOperator() {
+
+    }
+
     public double plus(double a, double b){
         return a + b;
     }

@@ -32,10 +32,9 @@ public class CalcMain1 {
         System.out.println(calcResult3);
         System.out.println(calcSaved.getCount());
 
-        Fizik fizik4 = new Fizik(calc5);
+        Fizik<ICalcWithCount> fizik4 = new Fizik<>(new CalcWithCounter3(calc1));
         double calcResult4 = fizik4.calc(123, -485);
 //        ICalcWithCount calcSaved1 = (ICalcWithCount) fizik4.getCalc();
-
 
         System.out.println(calcResult4);
 //        System.out.println(calcSaved.getCount());
@@ -43,9 +42,6 @@ public class CalcMain1 {
 //        System.out.println(((ICalcWithCount) fizik4.getCalc()).getCount());
         ICalc savedCalc4 = fizik4.getCalc();
 
-        if (savedCalc4 instanceof ICalcWithCount) {
-            System.out.println(((ICalcWithCount) fizik4.getCalc()).getCount());
-        }
-
+        System.out.println(fizik4.getCalc().getCount());
     }
 }
