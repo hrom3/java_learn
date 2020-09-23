@@ -63,6 +63,6 @@ public class Man implements Comparable<Man>{
 
     @Override
     public int compareTo(Man o) {
-    return this.hairLength - o.hairLength;// сравнение длинны волос
+        return this.hairLength - o.hairLength;
     }
 }

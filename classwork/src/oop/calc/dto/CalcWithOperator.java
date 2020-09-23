@@ -1,10 +1,7 @@
 package oop.calc.dto;
 
 public class CalcWithOperator implements ICalc{
-    public CalcWithOperator(int a){
-    }
-    public CalcWithOperator() {
-    }
+
     public double plus(double a, double b){
         return a + b;
     }
