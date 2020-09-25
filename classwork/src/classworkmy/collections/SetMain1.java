@@ -19,5 +19,8 @@ public class SetMain1 {
     set2.add("u");
     set2.add("r");
     set2.add("a");
+
+    System.out.println(data1);
+    System.out.println(set2);
     }
 }
