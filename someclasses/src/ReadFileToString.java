@@ -1,5 +1,7 @@
 import homework04.DataContainer;
 import homework04.StringsMy;
+import homework05.EasySearch;
+import homework05.MapComparator;
 
 import java.io.IOException;
 import java.nio.file.Files;
