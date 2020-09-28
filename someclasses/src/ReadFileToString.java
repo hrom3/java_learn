@@ -1,5 +1,5 @@
 import homework04.DataContainer;
-import homework04.StringsMy;
+import homework04.StringsHomeTaskMy;
 import homework05.EasySearch;
 import homework05.MapComparator;
 
@@ -74,7 +74,7 @@ public class ReadFileToString {
                                                 int number) {
         Iterator<String> itr = map.keySet().iterator();
         int i = 0;
-        StringsMy worldTimes = new StringsMy();
+        StringsHomeTaskMy worldTimes = new StringsHomeTaskMy();
         while (i < number && itr.hasNext())
         {
             String key = itr.next();
