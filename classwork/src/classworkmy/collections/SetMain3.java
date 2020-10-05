@@ -18,7 +18,7 @@ public class SetMain3 {
                 "123456789",
                 rnd.randomNextString(9)));
         passports.add(new PassportIdUnique(rnd.randomNextString(15),
-                "123456789",
+                "123458789",
                 rnd.randomNextString(9)));
         passports.add(new PassportIdUnique(rnd.randomNextString(15),
                 "123456789",
@@ -31,7 +31,7 @@ public class SetMain3 {
                 rnd.randomNextString(9)));
 
         for (PassportIdUnique passport : passports) {
-            System.out.println(passport);
+            System.out.println(passport.toString());
         }
 
     }
