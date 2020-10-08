@@ -52,4 +52,13 @@ public class PassportIdUnique {
         public int hashCode() {
             return Objects.hash(id);
         }
+
+    @Override
+    public String toString() {
+        return "PassportIdUnique{" +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }

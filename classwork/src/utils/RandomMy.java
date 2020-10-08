@@ -12,7 +12,7 @@ public class RandomMy {
     public static String randomNextString(int length) {
         StringBuilder b = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
-            b.append(allString[rnd.nextInt(allString.length - 1)]);
+            b.append(allString[rnd.nextInt(allString.length)]);
         }
         return  b.toString();
     }
