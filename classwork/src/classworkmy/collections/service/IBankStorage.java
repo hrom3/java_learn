@@ -9,7 +9,6 @@ public interface IBankStorage {
     void saveNewClient(Passport passport);
     Client getClient(String id);
     List<Passport> getPassportsByClientId(String id);
-
     List<Passport> getPassports();
 
 
