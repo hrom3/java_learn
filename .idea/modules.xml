@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tasks_from_worksheet/Tasks_from_worksheet.iml" filepath="$PROJECT_DIR$/Tasks_from_worksheet/Tasks_from_worksheet.iml" />
       <module fileurl="file://$PROJECT_DIR$/classwork/classwork.iml" filepath="$PROJECT_DIR$/classwork/classwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/classwork_my/classwork_my.iml" filepath="$PROJECT_DIR$/classwork_my/classwork_my.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework/homework.iml" filepath="$PROJECT_DIR$/homework/homework.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_learn.iml" filepath="$PROJECT_DIR$/java_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/someclasses/someclasses.iml" filepath="$PROJECT_DIR$/someclasses/someclasses.iml" />
