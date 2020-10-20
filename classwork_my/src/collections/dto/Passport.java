@@ -18,11 +18,11 @@ public class Passport {
         this.birthday = birthday;
     }
 
-    public classworkmy.collections.dto.EGender getEGender() {
+    public collections.dto.EGender getEGender() {
         return EGender;
     }
 
-    public void setEGender(classworkmy.collections.dto.EGender EGender) {
+    public void setEGender(collections.dto.EGender EGender) {
         this.EGender = EGender;
     }
 

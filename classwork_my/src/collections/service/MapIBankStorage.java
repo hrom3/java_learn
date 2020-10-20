@@ -1,7 +1,7 @@
 package collections.service;
 
-import classworkmy.collections.dto.Client;
-import classworkmy.collections.dto.Passport;
+import collections.dto.Client;
+import collections.dto.Passport;
 
 import java.util.*;
 

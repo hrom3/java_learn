@@ -1,6 +1,6 @@
 package collections;
 
-import classworkmy.collections.dto.Passport;
+import collections.dto.Passport;
 import utils.RandomMy;
 
 import java.util.HashSet;

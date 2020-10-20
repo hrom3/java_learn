@@ -1,7 +1,7 @@
 package generic;
 
-import classworkmy.generic.dto.BoxGeneric;
-import classworkmy.generic.dto.BoxGenericTwo;
+import generic.dto.BoxGeneric;
+import generic.dto.BoxGenericTwo;
 
 public class GenericMain3 {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package generic;
 
-import classworkmy.generic.dto.BoxNumber;
+import generic.dto.BoxNumber;
 
 public class GenericMain4 {
     public static void main(String[] args) {

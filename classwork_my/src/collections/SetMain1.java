@@ -1,6 +1,6 @@
 package collections;
 
-import classworkmy.generic.BadComparator;
+import generic.BadComparator;
 
 import java.util.HashSet;
 import java.util.Set;
