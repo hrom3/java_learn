@@ -1,0 +1,37 @@
+package test;
+
+public class Test10 {
+    static long a = 0;
+
+    public static void main(String[] args) {
+
+        Thread t1 = new Thread(() -> {
+            for (long i = 0; i < 100L; i++) {
+                a += 1;
+                System.err.println("setter a = " + a);
+            }
+        });
+
+        Thread t2 = new Thread(() ->{
+            while (!Thread.interrupted()) { // проверили на прерывание и сбросили статус прерывания
+                System.err.println("monitoring a = " + a);
+            }
+            while (!Thread.interrupted()) { // бесконечный цикл из-за строки 19
+  //              while (Thread.interrupted()) { // сюда не зайдем, выполнение остановится
+                System.err.println("monitoring \ta = " + a);
+            }
+        });
+
+        t2.start();
+        t1.start();
+
+        try {
+            t1.join();
+            t2.interrupt();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Done");
+    }
+}
