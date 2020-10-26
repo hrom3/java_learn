@@ -1,0 +1,23 @@
+<DailyExCards Date="11/22/2013">
+<Currency Id="480">
+<CharCode>USD</CharCode>
+<NumCode>840</NumCode>
+<Scale>1</Scale>
+<RateBuy>9290</RateBuy>
+<RateSell>9400</RateSell>
+</Currency>
+<Currency Id="481">
+<CharCode>EUR</CharCode>
+<NumCode>978</NumCode>
+<Scale>1</Scale>
+<RateBuy>12430</RateBuy>
+<RateSell>12630</RateSell>
+</Currency>
+<Currency Id="482">
+<CharCode>EUR(USD)</CharCode>
+<NumCode>978(840)</NumCode>
+<Scale>1</Scale>
+<RateBuy>1.3330</RateBuy>
+<RateSell>1.3620</RateSell>
+</Currency>
+</DailyExCards>
