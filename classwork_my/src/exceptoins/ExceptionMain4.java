@@ -1,8 +1,8 @@
 package exceptoins;
 
-import classworkmy.exceptoins.my_exeption.ArgumentNotANumber;
-import classworkmy.exceptoins.my_exeption.ArrayLengthNotValidException;
-import classworkmy.exceptoins.my_exeption.NumberIsNegativeException;
+import exceptoins.my_exeption.ArgumentNotANumber;
+import exceptoins.my_exeption.ArrayLengthNotValidException;
+import exceptoins.my_exeption.NumberIsNegativeException;
 import homework02.CountNumeralsInNumber;
 
 public class ExceptionMain4 {

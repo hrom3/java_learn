@@ -1,6 +1,6 @@
 package generic;
 
-import classworkmy.generic.dto.BoxObject;
+import generic.dto.BoxObject;
 import oop.calculator.CalcMain1;
 
 public class GenerikMain1 {

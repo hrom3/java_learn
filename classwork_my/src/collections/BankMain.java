@@ -1,10 +1,10 @@
 package collections;
 
-import classworkmy.collections.dto.Client;
-import classworkmy.collections.dto.EGender;
-import classworkmy.collections.dto.Passport;
-import classworkmy.collections.service.Bank;
-import classworkmy.collections.service.MapIBankStorage;
+import collections.dto.Client;
+import collections.dto.EGender;
+import collections.dto.Passport;
+import collections.service.Bank;
+import collections.service.MapIBankStorage;
 
 import java.util.Date;
 import java.util.List;
