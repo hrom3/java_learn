@@ -7,12 +7,12 @@ package com.company;
     на хостинг тем больше списывается со счёта пользователя. Когда у пользователя становится нулевой баланс хостинг останавливается
     и просит пополнить счёт.
  */
-public class Test5 {
+public class  Test5 {
 
     public static void main(String[] args) {
         //Есть аккаунт с деньгами
-//        HostingAccount account = new HostingAccountSafe1(99_999.10);
-        HostingAccount account = new HostingAccountSafe2(99_999.10);
+        HostingAccount account = new HostingAccountSafe1(99_999.10);
+//        HostingAccount account = new HostingAccountSafe2(99_999.10);
 //        HostingAccount account = new HostingAccountUnSafe(99_999.10); //Можем получить отрицательный балланс (запускать много раз)
 
         //Есть три приложения которые будут размещены на хостинге

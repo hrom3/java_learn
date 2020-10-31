@@ -1,27 +1,29 @@
-package com.company;
+package test;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
-public class Test11 {
+public class Test9 {
     static long a = 0;
 
     public static void main(String[] args) {
-        CountDownLatch latch = new CountDownLatch(1);
 
         Thread t1 = new Thread(() -> {
             for (long i = 0; i < 100L; i++) {
                 a += 1;
                 System.err.println("setter a = " + a);
             }
-            latch.countDown();
         });
 
         Thread t2 = new Thread(() ->{
             Thread currentT = Thread.currentThread();
             while (!currentT.isInterrupted()) {
-                System.err.println("monitoring a = " + a);
-            }
-            while (!currentT.isInterrupted()) {
+                try {
+                    TimeUnit.SECONDS.sleep(2);
+                } catch (InterruptedException swallowed) {
+                    System.err.println("Исключение получено");
+                    // Так делать крайне не рекомендуется поток может не завершится
+                }
                 System.err.println("monitoring a = " + a);
             }
         });
@@ -30,7 +32,7 @@ public class Test11 {
         t1.start();
 
         try {
-            latch.await();
+            t1.join();
             t2.interrupt();
         } catch (InterruptedException e) {
             e.printStackTrace();

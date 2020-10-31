@@ -16,12 +16,11 @@ public class Test10 {
         });
 
         Thread t2 = new Thread(() ->{
-            while (!Thread.interrupted()) { // проверили на прерывание и сбросили статус прерывания
+            while (!Thread.interrupted()) {
                 System.err.println("monitoring a = " + a);
             }
-            while (!Thread.interrupted()) { // бесконечный цикл из-за строки 19
-  //              while (Thread.interrupted()) { // сюда не зайдем, выполнение остановится
-                System.err.println("monitoring \ta = " + a);
+            while (!Thread.interrupted()) {
+                System.err.println("monitoring a = " + a);
             }
         });
 

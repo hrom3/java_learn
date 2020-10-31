@@ -1,8 +1,9 @@
-package com.company;
+package test;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
-public class Test11 {
+public class Test8 {
     static long a = 0;
 
     public static void main(String[] args) {
@@ -19,9 +20,11 @@ public class Test11 {
         Thread t2 = new Thread(() ->{
             Thread currentT = Thread.currentThread();
             while (!currentT.isInterrupted()) {
-                System.err.println("monitoring a = " + a);
-            }
-            while (!currentT.isInterrupted()) {
+                try {
+                    TimeUnit.SECONDS.sleep(2);
+                } catch (InterruptedException e) {
+                    currentT.interrupt();
+                }
                 System.err.println("monitoring a = " + a);
             }
         });

@@ -14,8 +14,7 @@ public class Test7 {
         });
 
         Thread t2 = new Thread(() ->{
-           // while (1 == 1) //бесконечен
-            while (!Thread.interrupted()) { // остановится
+            while (1 == 1) {
                 System.err.println("a = " + a);
                 System.err.println("monitoring a = " + a);
             }

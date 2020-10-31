@@ -1,27 +1,18 @@
-package com.company;
+package test;
 
-import java.util.concurrent.CountDownLatch;
-
-public class Test11 {
+public class Test2ver2 {
     static long a = 0;
 
     public static void main(String[] args) {
-        CountDownLatch latch = new CountDownLatch(1);
-
         Thread t1 = new Thread(() -> {
             for (long i = 0; i < 100L; i++) {
                 a += 1;
                 System.err.println("setter a = " + a);
             }
-            latch.countDown();
         });
 
         Thread t2 = new Thread(() ->{
-            Thread currentT = Thread.currentThread();
-            while (!currentT.isInterrupted()) {
-                System.err.println("monitoring a = " + a);
-            }
-            while (!currentT.isInterrupted()) {
+            while (!Thread.currentThread().isInterrupted()) {
                 System.err.println("monitoring a = " + a);
             }
         });
@@ -30,7 +21,7 @@ public class Test11 {
         t1.start();
 
         try {
-            latch.await();
+            t1.join();
             t2.interrupt();
         } catch (InterruptedException e) {
             e.printStackTrace();

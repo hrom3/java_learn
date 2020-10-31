@@ -1,8 +1,8 @@
-package com.company;
+package test;
 
 import java.util.concurrent.CountDownLatch;
 
-public class Test11 {
+public class Test6 {
     static long a = 0;
 
     public static void main(String[] args) {
@@ -16,13 +16,17 @@ public class Test11 {
             latch.countDown();
         });
 
-        Thread t2 = new Thread(() ->{
+        Thread t2 = new Thread(() -> {
             Thread currentT = Thread.currentThread();
-            while (!currentT.isInterrupted()) {
+            while (!currentT.isInterrupted()) { // не меняет флаг состояния
+                System.err.println("Флаг прерывания в цикле 1 = "
+                        + Thread.currentThread().isInterrupted());
                 System.err.println("monitoring a = " + a);
             }
-            while (!currentT.isInterrupted()) {
-                System.err.println("monitoring a = " + a);
+            System.err.println("Флаг прерывания до цикла 2 = "
+                    + Thread.currentThread().isInterrupted());
+            while (!currentT.isInterrupted()) { // не меняет флаг состояния
+                System.err.println("\tmonitoring B = " + a); // данный метод не выполнится
             }
         });
 

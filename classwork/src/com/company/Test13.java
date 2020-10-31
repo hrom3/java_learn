@@ -19,12 +19,11 @@ public class Test13 {
             Thread currentT = Thread.currentThread();
             while (!currentT.isInterrupted()) {
                 try {
-                    TimeUnit.NANOSECONDS.sleep(1);
+                    TimeUnit.NANOSECONDS.sleep(2);
                 } catch (InterruptedException e) {
-                    // до исключения поток может уснуть несклько раз
+                    //...
                     System.err.println("InterruptedException");
-                    currentT.interrupt(); // без даного вызова может завершится, а может и нет
-                    //зависит от момента когда сработает t2.interrupt() и состояния sleep в этот момент
+                    currentT.interrupt();
                 }
                 System.err.println("monitoring a = " + a);
             }
