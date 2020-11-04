@@ -3,6 +3,9 @@ package notification.service.notificator;
 import notification.service.notificator.ConsolNotifacator;
 import notification.service.notificator.core.INotificator;
 import notification.service.notificator.core.TypeNotify;
+import notification.service.notificator.special.MultipleNotificator;
+import notification.service.notificator.special.ResendNotificator;
+import notification.service.notificator.special.RetryNotifcator;
 
 
 public class NotificationMain1 {
@@ -12,26 +15,18 @@ public class NotificationMain1 {
         String managerName = "Саша";
         boolean isBadNotification = false;
 
-        if (managerName.equalsIgnoreCase("Илья")) {
-            if(!notify(new BrokenNotificator(), message)) {
-                notify(new ConsolNotifacator(), message);
- //               isBadNotification = true; //вариант 2
-            };
+        if (managerName.equalsIgnoreCase("Саша")) {
+            notify(RetryNotifcator.getInstance(5, new ResendNotificator(BrokenNotificator.getInstance(), ViberNotifacator.getInstance())), message);
+
         } else {
-            if(!notify(new BrokenNotificator(), message)) {
-                notify(new ConsolNotifacator(), message);
-//                isBadNotification = true; //вариант 2
-            }
+            notify(RetryNotifcator.getInstance(5, new ResendNotificator(ViberNotifacator.getInstance())), message);
         }
  //       if (isBadNotification) { //вариант 2
  //           notify(new ConsolNotifacator(), message);
  //       }
 
         TypeNotify[] typeNotifies = TypeNotify.values();
-        for (TypeNotify typeNotify : typeNotifies) {
-            notify(typeNotify, "Ваш заказ принят в обработку");
-        }
-
+            notify(new MultipleNotificator(typeNotifies), "Ваш заказ принят в обработку");
     }
 
     public static boolean notify(INotificator notificator, String message) {

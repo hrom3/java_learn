@@ -2,7 +2,6 @@ package notification.service.notificator.core;
 
 import notification.service.notificator.EmailNotifacator;
 import notification.service.notificator.ConsolNotifacator;
-import notification.service.notificator.ViberNotifacator;
 
 
 public enum TypeNotify implements INotificator {
